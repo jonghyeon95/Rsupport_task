@@ -25,11 +25,13 @@
 
 		<tbody>
 			<c:forEach var="notice" items="${notices.content}">
-				<tr onClick="location.href='/notice/${notice.notice_num}'">
-					<td>${notice.notice_num}</td>
-					<td>${notice.notice_title}</td>
-					<td>${notice.member.member_name}</td>
-					<td>${notice.notice_createDate}</td>
+				<tr onClick="location.href='/notice/${notice.num}'">
+					<td>${notice.num}</td>
+					<td>${notice.title}</td>
+					<td>${notice.member.name}</td>
+					<td>
+					<fmt:formatDate value="${notice.createDate}" pattern="yyyy.MM.dd"/>
+					</td>
 				</tr>
 			</c:forEach>
 		</tbody>

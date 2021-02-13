@@ -20,23 +20,22 @@ import com.cos.notice.model.Notice;
 import com.cos.notice.service.NoticeService;
 
 
-@RestController
+@Controller
 public class NoticeController {
 
 	@Autowired
 	NoticeService noticeService;
 	
+	
 	@GetMapping({"/",""})
-	public Page<Notice> index(Model model, @PageableDefault(sort="notice_id" ,size = 5) Pageable pageable) {	
-//		Page<Notice> usersPage = new PageImpl(noticeService.글목록1(), pageable, 6); 
-//		return usersPage;
-		return noticeService.글목록(pageable);
+	public String index(Model model, @PageableDefault(sort = "num", direction = Direction.DESC , size = 7) Pageable pageable) {	
+		model.addAttribute("notices", noticeService.글목록(pageable));
+		return "index";
 	}
 	
 //	@GetMapping({"/",""})
-//	public String index(Model model, @PageableDefault(direction = Direction.DESC , size = 3) Pageable pageable) {	
-//		model.addAttribute("notices", noticeService.글목록(pageable));
-//		return "index";
+//	public Page<Notice> index(Model model, @PageableDefault(sort = "num", direction = Direction.DESC , size = 7) Pageable pageable) {	
+//		return noticeService.글목록(pageable);
 //	}
 	
 	@GetMapping("notice/saveForm")

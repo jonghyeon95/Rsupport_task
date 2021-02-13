@@ -16,11 +16,9 @@ let index = {
 
 	save: function() {
 		let data = {
-			notice_title: $("#title").val(),
-			notice_content: $("#content").val(),
+			title: $("#title").val(),
+			content: $("#content").val(),
 		};
-		
-		console.log(data);
 		
 		$.ajax({
 			type:"POST",
@@ -70,10 +68,9 @@ let index = {
 		let id = $("#id").val();
 		
 		let data = {
-			notice_title: $("#title").val(),
-			notice_content: $("#content").val(),
+			title: $("#title").val(),
+			content: $("#content").val(),
 		};
-		console.log(id)
 		$.ajax({
 			type:"PUT",
 			url:"/api/notice/"+id,

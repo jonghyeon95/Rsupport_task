@@ -59,7 +59,7 @@ public class NoticeService {
 			return new IllegalArgumentException("글 삭제 실패: 해당글을 찾을 수 없습니다.");
 		});
 				
-		if(!notice.getMember().getMember_id().equals(principal.getUsername()))
+		if(!notice.getMember().getId().equals(principal.getUsername()))
 		{
 			throw new IllegalStateException("글 삭제 실패: 삭제 권한이 없습니다.");
 		}
@@ -79,20 +79,20 @@ public class NoticeService {
 			return new IllegalArgumentException("글 수정 실패: 해당글을 찾을 수 없습니다.");
 		});
 		
-		if(!notice.getMember().getMember_id().equals(principal.getUsername()))
+		if(!notice.getMember().getId().equals(principal.getUsername()))
 		{
 			throw new IllegalStateException("글 수정 실패: 수정 권한이 없습니다.");
 		}
 		
-		notice.setNotice_title(requsetNotice.getNotice_title());
-		notice.setNotice_content(requsetNotice.getNotice_content());
-		notice.setNotice_updateDate(new Timestamp(System.currentTimeMillis()));
+		notice.setTitle(requsetNotice.getTitle());
+		notice.setContent(requsetNotice.getContent());
+		notice.setUpdateDate(new Timestamp(System.currentTimeMillis()));
 		
 	}
 	
 	private boolean validationCheck(Notice notice)
 	{
-		if (notice.getNotice_content().length() == 0 ||  notice.getNotice_title().length() == 0)
+		if (notice.getContent().length() == 0 ||  notice.getTitle().length() == 0)
 			return false;
 		
 		return true;

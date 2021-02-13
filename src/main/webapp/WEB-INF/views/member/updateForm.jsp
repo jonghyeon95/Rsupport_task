@@ -14,11 +14,11 @@
 		</div>
 
 		<div class="form-group">
-			<label for="name">Name</label> <input type="text" value="${principal.member.member_name}" class="form-control" placeholder="Enter name" id="name">
+			<label for="name">Name</label> <input type="text" value="${principal.member.name}" class="form-control" placeholder="Enter name" id="name">
 		</div>
 
 		<div class="form-group">
-			<label for="email">Email</label> <input type="email" value="${principal.member.member_email}" class="form-control" placeholder="Enter email" id="email">
+			<label for="email">Email</label> <input type="email" value="${principal.member.email}" class="form-control" placeholder="Enter email" id="email">
 		</div>
 	</form>
 	<button id="btn-update" class="btn btn-primary">회원수정</button>

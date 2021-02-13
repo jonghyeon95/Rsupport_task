@@ -28,22 +28,22 @@ public class Notice {
 
 	@Id
 	@GeneratedValue(strategy = GenerationType.IDENTITY)
-	private int notice_num;
+	private int num;
  	
 	@Column(nullable = false, length = 100)
-	private String notice_title;
+	private String title;
 	
 	@Lob
-	private String notice_content;
+	private String content;
 	
 	@CreationTimestamp
-	private Timestamp notice_createDate;
+	private Timestamp createDate;
 	
 	@CreationTimestamp
-	private Timestamp notice_updateDate;
+	private Timestamp updateDate;
 	
 	@ManyToOne(fetch = FetchType.EAGER)
-	@JoinColumn(name="member_id")
+	@JoinColumn(name="id")
 	private Member member;
 	
 }

@@ -7,15 +7,15 @@
 	<form>
 		<div class="form-group">
 			<label for="title">Title</label> 
-			<input value="${notice.notice_title}" type="text" class="form-control" placeholder="Enter title" id="title">
+			<input value="${notice.title}" type="text" class="form-control" placeholder="Enter title" id="title">
 		</div>
 
 		<div class="form-group">
 			<label for="content">Content:</label>
-			<textarea class="form-control summernote" rows="5" id="content">${notice.notice_content}</textarea>
+			<textarea class="form-control summernote" rows="5" id="content">${notice.content}</textarea>
 		</div>
 		
-		<input type="hidden" id="id" value="${notice.notice_num}">
+		<input type="hidden" id="id" value="${notice.num}">
 	</form>
 	<button id="btn-update" class="btn btn-primary">수정 완료</button>
 </div>

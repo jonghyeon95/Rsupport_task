@@ -1,0 +1,11 @@
+@charset "EUC-KR";
+
+.inform{
+  text-align: right;
+  color: gray;
+}
+
+span{
+	margin-right: 10px;
+	font-style: italic;
+}

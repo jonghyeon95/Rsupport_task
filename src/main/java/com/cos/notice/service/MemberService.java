@@ -24,16 +24,16 @@ public class MemberService {
 		if (false == validationCheck(member)) {
 			throw new IllegalStateException("회원 가입 실패: 빈 값이 있습니다.");			
 		}
-		String rawPassword = member.getMember_pw();
+		String rawPassword = member.getPassword();
 		String encPassword = encoder.encode(rawPassword);
-		member.setMember_pw(encPassword);
+		member.setPassword(encPassword);
 		memberRepository.save(member);
 	}
 	
 	@Transactional
 	public void 회원수정(Member member) {
 
-		Member persistance = memberRepository.findById(member.getMember_id()).orElseThrow(() -> {
+		Member persistance = memberRepository.findById(member.getId()).orElseThrow(() -> {
 			return new IllegalArgumentException("회원 수정 실패: 해당회원을 찾을 수 없습니다.");
 		});
 		
@@ -41,17 +41,17 @@ public class MemberService {
 			throw new IllegalStateException("회원 수정 실패: 빈 값이 있습니다.");
 		}
 
-		String rawPassword = member.getMember_pw(); 
+		String rawPassword = member.getPassword(); 
 		String encPassword = encoder.encode(rawPassword); 
-		persistance.setMember_pw(encPassword);
-		persistance.setMember_email(member.getMember_email());
-		persistance.setMember_name(member.getMember_name());
+		persistance.setPassword(encPassword);
+		persistance.setEmail(member.getEmail());
+		persistance.setName(member.getName());
 	}
 	
 	private boolean validationCheck(Member member)
 	{
-		if (member.getMember_email().length() == 0 || member.getMember_id().length() == 0 || member.getMember_pw().length() == 0
-				|| member.getMember_name().length() == 0) {
+		if (member.getEmail().length() == 0 || member.getId().length() == 0 || member.getPassword().length() == 0
+				|| member.getName().length() == 0) {
 			return false;
 		}
 		

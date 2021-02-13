@@ -39,7 +39,7 @@ public class MemberApiController {
 
 		// 세션등록
 		Authentication authentication = authenticationManger
-				.authenticate(new UsernamePasswordAuthenticationToken(member.getMember_id(), member.getMember_pw()));
+				.authenticate(new UsernamePasswordAuthenticationToken(member.getId(), member.getPassword()));
 		SecurityContextHolder.getContext().setAuthentication(authentication);
 
 		return new ResponseDto<Integer>(HttpStatus.OK.value(), 1);

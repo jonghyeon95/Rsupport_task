@@ -29,22 +29,22 @@ public class Member {
 
 	@Id	//PK
 	@Column(length = 30)
-	private String member_id;
+	private String id;
 	
 	@Column(nullable = false, length = 255)
-	private String member_pw;
+	private String password;
 	
 	@Column(nullable = false, length = 20)
-	private String member_name;
+	private String name;
 	
 	@Column(nullable = false, length = 50)
-	private String member_email;
+	private String email;
 	
 	@CreationTimestamp
-	private Timestamp member_CreateDate;
+	private Timestamp createDate;
 	
 	@OneToMany(mappedBy = "member", fetch = FetchType.EAGER, cascade = CascadeType.REMOVE)	
 	@JsonIgnoreProperties({"member"})
-	@OrderBy("notice_num desc")
+	@OrderBy("num desc")
 	private List<Notice> notices;		
 }

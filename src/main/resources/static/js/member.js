@@ -10,10 +10,10 @@ let index = {
 
 	save: function() {
 		let data = {
-			member_id: $("#id").val(),
-			member_pw: $("#password").val(),
-			member_name: $("#name").val(),
-			member_email: $("#email").val()
+			id: $("#id").val(),
+			password: $("#password").val(),
+			name: $("#name").val(),
+			email: $("#email").val()
 		};
 
 		$.ajax({
@@ -39,10 +39,10 @@ let index = {
 	
 	update: function() {
 		let data = {
-			member_id: $("#id").val(),
-			member_pw: $("#password").val(),
-			member_name: $("#name").val(),
-			member_email: $("#email").val()
+			id: $("#id").val(),
+			password: $("#password").val(),
+			name: $("#name").val(),
+			email: $("#email").val()
 		};
 		$.ajax({
 			type: "PUT",

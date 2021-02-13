@@ -24,12 +24,12 @@ public class PrincipalDetail implements UserDetails{
 	
 	@Override
 	public String getPassword() {
-		return member.getMember_pw();
+		return member.getPassword();
 	}
 
 	@Override
 	public String getUsername() {
-		return member.getMember_id();
+		return member.getId();
 	}
 
 	//계정 만료되지 않았는지 리턴 true:만료안됨
