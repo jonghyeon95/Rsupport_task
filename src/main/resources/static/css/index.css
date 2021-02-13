@@ -1,0 +1,30 @@
+@charset "EUC-KR";
+
+th{
+	text-align: center;
+}
+
+th:nth-child(2){
+	width: 50%;
+}
+
+td{
+	text-align: center;
+		cursor: pointer;
+}
+
+td:nth-child(2){
+	width: 50%;
+	max-width: 300px;
+	white-space: nowrap;
+	overflow: hidden;
+	text-overflow: ellipsis;
+	text-align: left;
+}
+
+div h2{
+	display: inline-block;
+}
+div button{
+	float: right;
+}
