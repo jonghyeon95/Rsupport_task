@@ -8,8 +8,7 @@
 
 2. [mysql5.7 설치](https://dev.mysql.com/downloads/windows/installer/5.7.html)
    > mysql설치 후 root계정 생성 후 접속하여 아래 코드 입력
-   ```
-   -- 유저이름@
+```
 create user '생성한유저이름'@'%' identified by '생성한패스워드';
 
 GRANT ALL PRIVILEGES ON *.* TO '생성한유저이름'@'%';
@@ -17,7 +16,7 @@ GRANT ALL PRIVILEGES ON *.* TO '생성한유저이름'@'%';
 CREATE DATABASE rsupport_task CHARACTER SET utf8 DEFAULT COLLATE utf8_general_ci;
 
 use rsupport_task;
-   ```
+```
    
 3. [mysql 한글설정] (https://nesoy.github.io/articles/2017-05/mysql-UTF8) 후 Mysql 재시작
    
