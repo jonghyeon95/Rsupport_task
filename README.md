@@ -50,6 +50,6 @@ use rsupport_task;
 6. springboot Notice프로젝트 실행
 
 7. Mysql rsupport_task에 DB백업파일 Export
-   > id : sim  / pw : 0413
-   > id : user2 / pw : user2
-   > id : user3 / pw : user3
+   > id : sim  / pw : 0413  |  
+   > id : user2 / pw : user2  |  
+   > id : user3 / pw : user3  |
