@@ -6,7 +6,7 @@
 
 1. [java jdk1.8 설치](https://www.oracle.com/java/technologies/javase/javase-jdk8-downloads.html)
 
-2.[mysql5.7 설치](https://dev.mysql.com/downloads/windows/installer/5.7.html)
+1.[mysql5.7 설치](https://dev.mysql.com/downloads/windows/installer/5.7.html)
    > mysql설치 후 root계정 생성 후 접속하여 아래 코드 입력
    ```
    -- 유저이름@
