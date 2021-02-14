@@ -2,7 +2,23 @@
 
 ----------------------------
 
-실행방법
+## 개발툴
+
+* 프레임워크 : Springboot (STS4)
+* DB : mysql
+* front : JSP
+
+----------------------------
+
+## 기능
+
+* User 회원가입 및 로그인
+* 공지사항 작성/수정/삭제/조회 (첨부파일 불가)
+* 공지사항 목록 페이징
+
+----------------------------
+
+## 실행방법
 
 1. [java jdk1.8 설치](https://www.oracle.com/java/technologies/javase/javase-jdk8-downloads.html)
 
@@ -34,4 +50,6 @@ use rsupport_task;
 6. springboot Notice프로젝트 실행
 
 7. Mysql rsupport_task에 DB백업파일 Export
-   
+   > id : sim  / pw : 0413
+   > id : user2 / pw : user2
+   > id : user3 / pw : user3
