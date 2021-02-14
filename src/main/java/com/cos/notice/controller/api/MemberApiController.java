@@ -27,7 +27,6 @@ public class MemberApiController {
 
 	@PostMapping("/auth/joinProc")
 	public ResponseDto<Integer> save(@RequestBody Member member) {
-		System.out.println("UserApi save 호출 ");
 		memberService.회원가입(member);
 		return new ResponseDto<Integer>(HttpStatus.OK.value(), 1);
 	}

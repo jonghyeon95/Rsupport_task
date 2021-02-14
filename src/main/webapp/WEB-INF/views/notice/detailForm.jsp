@@ -4,6 +4,7 @@
 
 
 <div class="container">
+	<h3>공지사항</h3>
 	<form>
 		<button class="btn btn-secondary" onClick="history.back(); return false ;">돌아가기</button>
 		<c:if test="${notice.member.id eq principal.username}">
@@ -12,18 +13,16 @@
 		</c:if>
 		<br /> <br />
 		<div class="inform">
-			작성자 : <span><i>${notice.member.name} </i></span> 
-			작성일 : <span><fmt:formatDate value="${notice.createDate}" pattern="yyyy.MM.dd"/></span>
-			최종수정일 : <span><fmt:formatDate value="${notice.updateDate}" pattern="yyyy.MM.dd"/></span>
+			작성자 : <span><i>${notice.member.name} </i></span> 작성일 : <span><fmt:formatDate value="${notice.createDate}" pattern="yyyy.MM.dd" /></span> 최종수정일 : <span><fmt:formatDate
+					value="${notice.updateDate}" pattern="yyyy.MM.dd" /></span>
 		</div>
 		<br />
-		<div>
-			<label for="username">Title</label>
-			<h3>${notice.title}</h3>
+		<div class="title">
+			<h5>${notice.title}</h5>
 		</div>
 
 
-		<div>
+		<div class="content">
 			<label for="content">Content:</label>
 			<div>${notice.content}</div>
 		</div>

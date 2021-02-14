@@ -17,7 +17,6 @@ import com.cos.notice.model.Member;
 import com.cos.notice.model.Notice;
 import com.cos.notice.repository.NoticeRepository;
 
-//스프링이 컴포넌트 스캔을 통해 Bean에 등록해줌. IoC를 해줌
 @Service
 public class NoticeService {
 
@@ -25,7 +24,7 @@ public class NoticeService {
 	private NoticeRepository noticeRepository;
 	
 	@Transactional
-	public void 글쓰기(Notice notice, Member member) {
+	public void 글등록(Notice notice, Member member) {
 		
 		if(false == validationCheck(notice))
 		{
@@ -39,11 +38,6 @@ public class NoticeService {
 	@Transactional(readOnly=true)
 	public Page<Notice> 글목록(Pageable pageable){
 		return noticeRepository.findAll(pageable);
-	}
-	
-	@Transactional(readOnly=true)
-	public List<Notice> 글목록1(){
-		return noticeRepository.findAll();
 	}
 	
 	@Transactional(readOnly=true)

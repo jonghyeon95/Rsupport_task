@@ -9,8 +9,5 @@ import org.springframework.data.jpa.repository.Query;
 import com.cos.notice.model.Notice;
 
 public interface NoticeRepository extends JpaRepository<Notice, Integer>{
-//	@Modifying
-//	@Query("SELECT * FROM notice ORDER BY notice_num DESC")
-//	List<Notice> findByAllDesc();
 
 }

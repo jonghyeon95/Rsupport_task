@@ -1,7 +1,5 @@
 package com.cos.notice.controller;
 
-//import java.util.ArrayList;
-import java.util.List;
 
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.data.domain.Page;
@@ -32,11 +30,6 @@ public class NoticeController {
 		model.addAttribute("notices", noticeService.글목록(pageable));
 		return "index";
 	}
-	
-//	@GetMapping({"/",""})
-//	public Page<Notice> index(Model model, @PageableDefault(sort = "num", direction = Direction.DESC , size = 7) Pageable pageable) {	
-//		return noticeService.글목록(pageable);
-//	}
 	
 	@GetMapping("notice/saveForm")
 	public String saveForm() {

@@ -25,7 +25,7 @@ public class NoticeApiController {
 	@PostMapping("/api/notice")
 	public ResponseDto<Integer> save(@RequestBody Notice notice, @AuthenticationPrincipal PrincipalDetail principal)
 	{
-		noticeService.글쓰기(notice, principal.getMember());
+		noticeService.글등록(notice, principal.getMember());
 		return new ResponseDto<Integer>(HttpStatus.OK.value(), 1);
 	}
 	

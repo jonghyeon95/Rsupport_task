@@ -9,3 +9,22 @@ span{
 	margin-right: 10px;
 	font-style: italic;
 }
+
+.title{
+	border-top : solid;
+	border-bottom : solid;
+	border-top-width : medium;
+	border-bottom-width : thin;
+	border-color: black;
+	text-align : center;
+	padding-top: 5px;
+	padding-bottom: 5px;
+	background-color: AliceBlue;
+}
+
+.content{
+	border-bottom : solid;
+	border-bottom-width : medium;
+	border-color: black;
+	padding: 5px;
+}

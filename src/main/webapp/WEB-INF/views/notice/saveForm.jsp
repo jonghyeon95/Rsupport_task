@@ -9,14 +9,6 @@
 			<label for="username">Title</label> <input type="text" class="form-control" placeholder="Enter title" id="title">
 		</div>
 
-		<!-- <div id="filetext">첨부파일</div>
-		<div id="fileArea">
-			<div id="setFile0">
-				<input type="file" class="file" name="setFile" onchange="changeFile(this);"> 
-				<input name="fileDel" class="delFile" type="button" value="삭제" onclick="delFile('setFile0');">
-			</div>
-		</div> -->
-
 		<div class="form-group">
 			<label for="content">Content:</label>
 			<textarea class="form-control summernote" rows="5" id="content"></textarea>
